@@ -1,0 +1,237 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Manhattan Movement and Arts Center | Jasmin Soler, 2026</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gravitas+One&family=Henny+Penny&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+<style>
+
+html, body{
+margin:0;
+padding:0;
+scroll-behavior:smooth;
+font-family:"Roboto Condensed", sans-serif;
+}
+
+body{
+background:#000;
+}
+
+.wrapper{
+width:100%;
+margin:auto;
+}
+
+nav{
+background:rgba(0,0,0,.9);
+position:fixed;
+top:0;
+width:100%;
+z-index:1000;
+}
+
+nav ul{
+list-style:none;
+margin:0;
+padding:0;
+text-align:center;
+}
+
+nav ul li{
+display:inline-block;
+}
+
+nav ul li a{
+display:block;
+padding:20px 40px;
+color:white;
+text-decoration:none;
+font-size:20px;
+}
+
+nav ul li a:hover{
+background:#D33033;
+}
+	
+section{
+min-height:100vh;
+background-size:cover;
+background-repeat:no-repeat;
+background-position:center;
+position:relative;
+overflow:hidden;
+}
+
+section::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:linear-gradient(
+rgba(0,0,0,0.25),
+rgba(0,0,0,0.45)
+);
+z-index:1;
+}
+
+nav, .calendar, .video, .map, footer{
+position:relative;
+z-index:2;
+}
+
+#home{
+background-image:url("performance.jpg");
+}
+
+#media{
+background-image:url("interior.jpg");
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+#location{
+background-image:url("exterior.jpg");
+background-position:center 65%;
+}
+.calendar{
+position:absolute;
+bottom:40px;
+left:40px;
+width:520px;
+height:360px;
+border:none;
+box-shadow:0 6px 25px rgba(0,0,0,.6);
+}
+
+.video{
+width:70%;
+max-width:900px;
+height:460px;
+border:none;
+box-shadow:0 4px 20px rgba(0,0,0,.5);
+}
+.map{
+position:absolute;
+top:140px;
+right:40px;
+width:520px;
+height:360px;
+border:none;
+box-shadow:0 6px 25px rgba(0,0,0,.6);
+}
+
+footer{
+background:black;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+/* ---------------- MOBILE DESIGN ---------------- */
+
+@media (max-width:768px){
+
+nav ul li a{
+padding:12px 16px;
+font-size:16px;
+}
+
+.video{
+width:100%;
+height:260px;
+margin-top:80px;
+}
+
+.calendar{
+width:90%;
+height:260px;
+left:50%;
+transform:translateX(-50%);
+bottom:20px;
+}
+
+.map{
+width:90%;
+height:260px;
+left:50%;
+transform:translateX(-50%);
+top:100px;
+right:auto;
+}
+
+#location{
+background-position:center 60%;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+<nav>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#media">Media</a></li>
+<li><a href="#location">Location</a></li>
+</ul>
+</nav>
+
+<main>
+
+<section id="home">
+
+<iframe
+src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FNew_York&showPrint=0&showCalendars=0&src=ZTViNDU2NmFhODBkZmIxMjFiZDg5YjIxMzc3Njc3N2NlNzRmNmJlYjA4MDVlNjAyMWJkZTI5ODc1Y2UyNzY2NkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23ef6c00&color=%230b8043"
+class="calendar"
+scrolling="no">
+</iframe>
+
+</section>
+
+<section id="media">
+
+<iframe
+src="https://www.youtube.com/embed/S4nrH2d2YFY"
+class="video"
+title="YouTube video player"
+allowfullscreen>
+</iframe>
+
+</section>
+
+<section id="location">
+
+<iframe
+src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6043.110221195926!2d-73.98933099999999!3d40.771808799999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2585c1f26da37%3A0x63237e8123b0b613!2sManhattan%20Movement%20%26%20Arts%20Center!5e0!3m2!1sen!2sus!4v1772212194323!5m2!1sen!2sus"
+class="map"
+allowfullscreen
+loading="lazy">
+</iframe>
+
+</section>
+
+</main>
+
+<footer>
+© 2026, Jasmin Soler. <br>
+This is a fictitious web page created solely for the purpose of education and training. All products and people associated with this web page are also fictitious. Any resemblance to real brands, products, or people is purely coincidental.
+</footer>
+
+</div>
+
+</body>
+</html>
