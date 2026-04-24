@@ -1,0 +1,529 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Travelocity | Jasmin Soler | 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+<style>
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: url("santorini.webp") no-repeat center center fixed;
+    background-size: cover;
+    color: #1f2a44;
+}
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(18, 34, 63, 0.28);
+    z-index: -1;
+}
+wrapper {
+    width: 1366px;
+    max-width: 90%;
+    margin: auto;
+    display: block;
+}
+header {
+    height: 90px;
+    background: linear-gradient(90deg, #174873, #2f7fa3, #d99a6c);
+    color: white;
+}
+.header-content {
+    width: 1366px;
+    max-width: 90%;
+    height: 90px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 245px;
+    height: auto;
+    display: block;
+}
+
+.top-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 28px;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.top-links a i {
+    margin-right: 7px;
+}
+
+#Tabs1 {
+    background: rgba(255, 255, 255, 0.84);
+    padding: 28px;
+    border-radius: 18px;
+    margin-top: 70px;
+    box-shadow: 0 12px 35px rgba(15, 31, 52, 0.28);
+    border: 1px solid rgba(255,255,255,0.45);
+    backdrop-filter: blur(4px);
+}
+
+.ui-widget {
+    font-family: 'Poppins', sans-serif;
+}
+
+.ui-widget.ui-widget-content {
+    border: none;
+}
+
+#Tabs1 ul {
+    background: none;
+    border: none;
+    padding: 0;
+    margin-bottom: 22px;
+}
+
+.ui-tabs .ui-tabs-nav li {
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #d8d3cf;
+    background: rgba(255,255,255,0.7);
+}
+
+.ui-tabs .ui-tabs-nav li a {
+    color: #1f2a44;
+    font-size: 14px;
+    padding: 10px 16px;
+}
+
+.ui-tabs .ui-tabs-nav li a i {
+    margin-right: 6px;
+}
+
+.ui-tabs .ui-tabs-nav li.ui-tabs-active {
+    background: #2f7fa3;
+    border: 1px solid #2f7fa3;
+}
+
+.ui-tabs .ui-tabs-nav li.ui-tabs-active a {
+    color: white;
+}
+
+.search-row {
+    display: flex;
+    gap: 14px;
+    align-items: stretch;
+    margin-top: 10px;
+}
+
+.search-box {
+    flex: 1;
+    padding: 12px 14px;
+    border: 1px solid #d8d3cf;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.78);
+}
+
+.search-box label {
+    font-size: 11px;
+    color: #5d6675;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.input-line {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.input-line i {
+    color: #2f7fa3;
+    font-size: 15px;
+}
+
+.search-box input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 14px;
+    color: #1f2a44;
+}
+
+.search-btn {
+    background: #2f7fa3;
+    color: white;
+    border: none;
+    padding: 14px 24px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.flight-banner {
+    margin-top: 30px;
+    height: 330px;
+    border-radius: 16px;
+    background: url("airplane.jpg") no-repeat center center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.flight-banner::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(31, 42, 68, 0.25);
+}
+
+.banner-content {
+    position: absolute;
+    bottom: 28px;
+    left: 28px;
+    background: rgba(47, 127, 163, 0.94);
+    color: white;
+    padding: 24px;
+    border-radius: 14px;
+    max-width: 330px;
+    z-index: 2;
+}
+
+.banner-content h2 {
+    margin: 0 0 10px;
+    font-size: 24px;
+}
+
+.banner-btn {
+    background: white;
+    color: #174873;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.hotel-section,
+.feature-section {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.hotel-card,
+.feature-card {
+    background: rgba(255,255,255,0.9);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 8px 18px rgba(15, 31, 52, 0.16);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.hotel-card:hover,
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.hotel-card img,
+.feature-card img {
+    width: 100%;
+    height: 145px;
+    object-fit: cover;
+    display: block;
+}
+.car-card img {
+    object-fit: contain;
+    background: #ffffff;
+    padding: 10px;
+}
+
+.hotel-card .sub,
+.feature-card .sub {
+    font-size: 11px;
+    color: #6d7480;
+    margin: 10px 12px 4px;
+}
+
+.hotel-card h3,
+.feature-card h3 {
+    font-size: 14px;
+    line-height: 1.25;
+    margin: 0 12px 14px;
+}
+
+.feature-banner {
+    margin-top: 30px;
+    border-radius: 16px;
+    background: linear-gradient(90deg, #174873, #2f7fa3, #d99a6c);
+    color: white;
+    padding: 26px;
+}
+
+.feature-banner h2 {
+    margin: 0 0 8px;
+}
+
+.feature-banner p {
+    margin: 0;
+    max-width: 650px;
+}
+
+@media screen and (max-width: 900px) {
+    .search-row {
+        flex-direction: column;
+    }
+
+    .hotel-section,
+    .feature-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .flight-banner {
+        height: 260px;
+    }
+
+    .banner-content {
+        left: 18px;
+        bottom: 18px;
+        max-width: 85%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        height: auto;
+        padding: 18px 0;
+    }
+
+    .header-content {
+        height: auto;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .logo {
+        width: 210px;
+    }
+
+    .top-links a {
+        margin: 0 10px;
+    }
+
+    #Tabs1 {
+        margin-top: 35px;
+        padding: 18px;
+    }
+
+    .ui-tabs .ui-tabs-nav li {
+        width: 100%;
+        margin-bottom: 6px;
+    }
+
+    .ui-tabs .ui-tabs-nav li a {
+        width: 100%;
+    }
+
+    .hotel-section,
+    .feature-section {
+        grid-template-columns: 1fr;
+    }
+}
+	footer {
+    padding: 25px 0;
+    text-align: center;
+    color: white;
+    font-size: 13px;
+    line-height: 1.6;
+    background: rgba(0,0,0,0.35);
+    backdrop-filter: blur(4px);
+    text-shadow: 0 0 6px rgba(255,255,255,0.25);
+    animation: footerFade 1.2s ease-in-out;
+}
+
+@keyframes footerFade {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+	html, body {
+    min-height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+wrapper {
+    flex: 1;
+}
+
+footer {
+    margin-top: auto;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="header-content">
+        <img src="logo.png" alt="Travelocity logo" class="logo">
+
+        <div class="top-links">
+            <a href="#"><i class="fa-solid fa-headset"></i>Support</a>
+            <a href="#"><i class="fa-solid fa-circle-user"></i>Sign In</a>
+        </div>
+    </div>
+</header>
+
+<wrapper>
+
+<div id="Tabs1">
+    <ul>
+        <li><a href="#tabs-1"><i class="fa-solid fa-plane-departure"></i>Flights</a></li>
+        <li><a href="#tabs-2"><i class="fa-solid fa-hotel"></i>Hotels</a></li>
+        <li><a href="#tabs-3"><i class="fa-solid fa-car-side"></i>Cars</a></li>
+        <li><a href="#tabs-4"><i class="fa-solid fa-suitcase-rolling"></i>Packages</a></li>
+        <li><a href="#tabs-5"><i class="fa-solid fa-umbrella-beach"></i>Activities</a></li>
+    </ul>
+
+    <div id="tabs-1">
+        <div class="search-row">
+            <div class="search-box"><label>Flying to?</label><div class="input-line"><i class="fa-solid fa-location-dot"></i><input type="text" placeholder="Destination"></div></div>
+            <div class="search-box"><label>Departing</label><div class="input-line"><i class="fa-solid fa-calendar-days"></i><input type="text" class="date-picker" placeholder="Select date"></div></div>
+            <div class="search-box"><label>Returning</label><div class="input-line"><i class="fa-solid fa-calendar-check"></i><input type="text" class="date-picker" placeholder="Select date"></div></div>
+            <button class="search-btn">Search</button>
+        </div>
+
+        <div class="flight-banner">
+            <div class="banner-content">
+                <h2>Travel deals for days</h2>
+                <p>Make a break for it and save on that special getaway.</p>
+                <button class="banner-btn">Explore deals</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="tabs-2">
+        <div class="search-row">
+            <div class="search-box"><label>Where to?</label><div class="input-line"><i class="fa-solid fa-location-dot"></i><input type="text" placeholder="Hotel location"></div></div>
+            <div class="search-box"><label>Check-in</label><div class="input-line"><i class="fa-solid fa-calendar-days"></i><input type="text" class="date-picker" placeholder="Select date"></div></div>
+            <div class="search-box"><label>Check-out</label><div class="input-line"><i class="fa-solid fa-calendar-check"></i><input type="text" class="date-picker" placeholder="Select date"></div></div>
+            <button class="search-btn">Search</button>
+        </div>
+
+        <div class="hotel-section">
+            <div class="hotel-card"><img src="hotel1.jpg" alt="Hotel"><p class="sub">Hotel</p><h3>Luxury stays with ocean views</h3></div>
+            <div class="hotel-card"><img src="hotel2.jpg" alt="Motel"><p class="sub">Motel</p><h3>Affordable roadside comfort</h3></div>
+            <div class="hotel-card"><img src="hotel3.jpg" alt="Bed and Breakfast"><p class="sub">Bed & Breakfast</p><h3>Cozy escapes with local charm</h3></div>
+            <div class="hotel-card"><img src="hotel4.jpg" alt="Airbnb"><p class="sub">Airbnb</p><h3>Stay like a local anywhere</h3></div>
+        </div>
+    </div>
+
+    <div id="tabs-3">
+        <div class="search-row">
+            <div class="search-box"><label>Pick-up location</label><div class="input-line"><i class="fa-solid fa-location-dot"></i><input type="text" placeholder="City or airport"></div></div>
+            <div class="search-box"><label>Pick-up date</label><div class="input-line"><i class="fa-solid fa-calendar-days"></i><input type="text" class="date-picker" placeholder="Select date"></div></div>
+            <div class="search-box"><label>Drop-off date</label><div class="input-line"><i class="fa-solid fa-calendar-check"></i><input type="text" class="date-picker" placeholder="Select date"></div></div>
+            <button class="search-btn">Search</button>
+        </div>
+
+        <div class="feature-banner">
+            <h2>Drive your trip your way</h2>
+            <p>Choose from compact cars, SUVs, luxury rides, or family-friendly rentals for every adventure.</p>
+        </div>
+
+        <div class="feature-section">
+            <div class="feature-card car-card"><img src="car1.jpg" alt="Compact car"><p class="sub">Compact</p><h3>Easy city driving and quick parking</h3></div>
+            <div class="feature-card car-card"><img src="car2.jpg" alt="SUV"><p class="sub">SUV</p><h3>Room for luggage, friends, and road trips</h3></div>
+            <div class="feature-card car-card"><img src="car3.jpg" alt="Luxury car"><p class="sub">Luxury</p><h3>Upgrade your ride with premium comfort</h3></div>
+            <div class="feature-card car-card"><img src="car4.jpg" alt="Convertible"><p class="sub">Convertible</p><h3>Enjoy scenic views from every mile</h3></div>
+        </div>
+    </div>
+
+    <div id="tabs-4">
+        <div class="search-row">
+            <div class="search-box"><label>Destination</label><div class="input-line"><i class="fa-solid fa-location-dot"></i><input type="text" placeholder="Where to?"></div></div>
+            <div class="search-box"><label>Start date</label><div class="input-line"><i class="fa-solid fa-calendar-days"></i><input type="text" class="date-picker" placeholder="Select date"></div></div>
+            <div class="search-box"><label>End date</label><div class="input-line"><i class="fa-solid fa-calendar-check"></i><input type="text" class="date-picker" placeholder="Select date"></div></div>
+            <button class="search-btn">Search</button>
+        </div>
+
+        <div class="feature-banner">
+            <h2>Bundle more. Save more.</h2>
+            <p>Pair flights, hotels, and rentals together to create your perfect getaway package.</p>
+        </div>
+
+        <div class="feature-section">
+            <div class="feature-card"><img src="package1.jpg" alt="Beach package"><p class="sub">Beach Escape</p><h3>Flight and resort bundles made simple</h3></div>
+            <div class="feature-card"><img src="package2.jpg" alt="City package"><p class="sub">City Break</p><h3>Hotel and flight deals for quick trips</h3></div>
+            <div class="feature-card"><img src="package3.jpg" alt="Family package"><p class="sub">Family Trip</p><h3>Comfortable bundles for the whole crew</h3></div>
+            <div class="feature-card"><img src="package4.jpg" alt="Romantic package"><p class="sub">Romantic Getaway</p><h3>Plan something unforgettable together</h3></div>
+        </div>
+    </div>
+
+    <div id="tabs-5">
+        <div class="search-row">
+            <div class="search-box"><label>Activity location</label><div class="input-line"><i class="fa-solid fa-location-dot"></i><input type="text" placeholder="City or destination"></div></div>
+            <div class="search-box"><label>Activity date</label><div class="input-line"><i class="fa-solid fa-calendar-days"></i><input type="text" class="date-picker" placeholder="Select date"></div></div>
+            <div class="search-box"><label>Guests</label><div class="input-line"><i class="fa-solid fa-user-group"></i><input type="text" placeholder="2 guests"></div></div>
+            <button class="search-btn">Search</button>
+        </div>
+
+        <div class="feature-banner">
+            <h2>Find things worth remembering</h2>
+            <p>Book beach days, tours, food experiences, museum visits, and once-in-a-lifetime activities.</p>
+        </div>
+
+        <div class="feature-section">
+            <div class="feature-card"><img src="activity1.jpg" alt="Beach activity"><p class="sub">Beach Day</p><h3>Relax under the sun with ocean views</h3></div>
+            <div class="feature-card"><img src="activity2.jpg" alt="Tour"><p class="sub">Guided Tour</p><h3>Explore hidden gems with local guides</h3></div>
+            <div class="feature-card"><img src="activity3.jpg" alt="Food experience"><p class="sub">Food Experience</p><h3>Taste your way through the city</h3></div>
+            <div class="feature-card"><img src="activity4.jpg" alt="Adventure"><p class="sub">Adventure</p><h3>Add excitement to your itinerary</h3></div>
+        </div>
+    </div>
+
+</div>
+
+</wrapper>
+	
+<footer>
+<p>
+© 2026, Jasmin Soler.<br>
+This is a fictitious web page created solely for the purpose of education and training.
+All products and people associated with this web page are also fictitious.
+Any resemblance to real brands, products, or people is purely coincidental.
+</p>
+</footer>
+
+<script>
+$(function() {
+    $("#Tabs1").tabs();
+
+    $(".date-picker").datepicker({
+        dateFormat: "M d, yy"
+    });
+});
+</script>
+
+</body>
+</html>
