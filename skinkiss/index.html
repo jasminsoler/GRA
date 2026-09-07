@@ -1,0 +1,1262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Skin Kiss | Jasmin Soler, 2026</title>
+
+
+    <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =====================================================
+         SKIN KISS MAIN STYLESHEET
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="css/styles.css"
+    >
+
+
+<!-- =====================================================
+     SHOP DROPDOWN OVERRIDE
+     CLICK / TAP ONLY — NO HOVER
+===================================================== -->
+
+
+<style id="skin-kiss-click-only-dropdown-fix">
+/* SHOP DROPDOWN — CLICK/TAP ONLY */
+.dropdown {
+    position: relative;
+}
+
+.dropdown:not(.open) .dropdown-menu {
+    display: none !important;
+}
+
+.dropdown.open .dropdown-menu {
+    display: flex !important;
+}
+
+/* Disable the old hover behavior completely */
+.dropdown:hover .dropdown-menu {
+    display: none !important;
+}
+
+.dropdown.open:hover .dropdown-menu {
+    display: flex !important;
+}
+
+.shop-dropdown-toggle {
+    appearance: none;
+    border: none;
+    background: transparent;
+    color: #4a1f2d;
+    font-family: "Montserrat", sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 0;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.shop-dropdown-toggle:hover {
+    color: #e75885;
+}
+
+@media (max-width: 900px) {
+    .dropdown-menu {
+        position: static;
+        transform: none;
+        width: 210px;
+        margin: 10px auto 0;
+        border-radius: 18px;
+    }
+}
+</style>
+
+
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         HEADER
+         SHARED SITE NAVIGATION
+    ====================================================== -->
+
+    <!-- =================================================
+         HOMEPAGE PROMOTIONAL BANNER
+         BUY 2, GET 1 FREE
+         Homepage only — moving announcement strip
+    ================================================== -->
+
+    <div class="skin-kiss-promo-banner" role="note" aria-label="Skin Kiss promotion">
+        <div class="promo-marquee" aria-hidden="true">
+            <div class="promo-track">
+                <span><strong>BUY 2, GET 1 FREE</strong> ✦ A LITTLE EXTRA GLOW, ON US</span>
+                <span><strong>BUY 2, GET 1 FREE</strong> ✦ A LITTLE EXTRA GLOW, ON US</span>
+                <span><strong>BUY 2, GET 1 FREE</strong> ✦ A LITTLE EXTRA GLOW, ON US</span>
+                <span><strong>BUY 2, GET 1 FREE</strong> ✦ A LITTLE EXTRA GLOW, ON US</span>
+            </div>
+        </div>
+        <span class="sr-only">Buy 2, get 1 free. A little extra glow, on us.</span>
+    </div>
+
+    <header>
+
+
+        <!-- =================================================
+             LOGO
+        ================================================== -->
+
+        <div class="logo-area">
+
+            <a href="index.html">
+
+                <img
+                    src="images/logo.png"
+                    alt="Skin Kiss Logo"
+                >
+
+            </a>
+
+        </div>
+
+
+        <!-- =================================================
+             MAIN NAVIGATION
+        ================================================== -->
+
+        <nav
+            class="top-nav"
+            aria-label="Main navigation"
+        >
+
+            <ul>
+
+
+                <!-- HOME -->
+
+                <li>
+
+                    <a href="index.html">
+
+                        <span>♡</span>
+
+                        Home
+
+                    </a>
+
+                </li>
+
+
+                <!-- SHOP DROPDOWN -->
+
+                <li class="dropdown">
+
+                <button
+                    type="button"
+                    class="shop-dropdown-toggle"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    aria-controls="shop-menu"
+                >
+
+                    <span>✦</span>
+
+                    Shop
+
+                </button>
+
+
+                <ul
+                    class="dropdown-menu"
+                    id="shop-menu"
+                >
+
+                    <li>
+
+                        <a href="tools.html">
+
+                            <span>🪄</span>
+
+                            Tools
+
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a href="treatments.html">
+
+                            <span>◌</span>
+
+                            Treatments
+
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </li>
+
+
+                <!-- THE GLOW EDIT -->
+
+                <li>
+
+                    <a href="glow-edit.html">
+
+                        <span>✧</span>
+
+                        The Glow Edit
+
+                    </a>
+
+                </li>
+
+
+                <!-- TRACK ORDER -->
+
+                <li>
+
+                    <a href="trackpackage.html">
+
+                        <span>⌁</span>
+
+                        Track Order
+
+                    </a>
+
+                </li>
+
+
+                <!-- OUR STORY -->
+
+                <li>
+
+                    <a href="our-story.html">
+
+                        <span>❀</span>
+
+                        Our Story
+
+                    </a>
+
+                </li>
+
+
+                <!-- CART / CHECKOUT -->
+
+                <li>
+
+                    <a href="cart-checkout.html">
+
+                        <span>🛍</span>
+
+                        Cart / Checkout
+
+                    </a>
+
+                </li>
+
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <!-- =====================================================
+         HOMEPAGE CONTENT
+    ====================================================== -->
+
+    <main>
+
+
+        <!-- =================================================
+             HERO BANNER
+        ================================================== -->
+
+        <section class="hero-banner">
+
+
+            <!-- HERO IMAGE -->
+
+            <img
+                class="hero-image"
+                src="images/hero.png"
+                alt="Skin Kiss skincare hero"
+            >
+
+
+            <!-- HERO TEXT -->
+
+            <div class="hero-overlay">
+
+
+
+                <!-- HEADING -->
+
+                <h1>
+                    Welcome to Skin Kiss
+                </h1>
+
+
+                <!-- DESCRIPTION -->
+
+                <p>
+                    Pink, glossy, girly skincare essentials
+                    for your everyday glow.
+                </p>
+
+
+                <!-- SHOP BUTTON -->
+
+                <a
+                    href="tools.html"
+                    class="button"
+                >
+                    Shop Now
+                </a>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             SHOP COLLECTIONS
+        ================================================== -->
+
+        <section class="collections">
+
+
+            <h2>
+                Shop Collections
+            </h2>
+
+
+            <div class="collection-grid">
+
+
+                <!-- TOOLS -->
+
+                <a
+                    href="tools.html"
+                    class="collection-card"
+                >
+
+                    <h3>
+                        Tools
+                    </h3>
+
+                    <p>
+                        Glow rollers, beauty tools,
+                        and skincare essentials.
+                    </p>
+
+                </a>
+
+
+                <!-- TREATMENTS -->
+
+                <a
+                    href="treatments.html"
+                    class="collection-card"
+                >
+
+                    <h3>
+                        Treatments
+                    </h3>
+
+                    <p>
+                        Masks, serums, and products
+                        made for soft skin days.
+                    </p>
+
+                </a>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             THE GLOW EDIT SECTION
+        ================================================== -->
+
+        <section class="split-section">
+
+
+            <!-- TEXT -->
+
+            <div class="split-text">
+
+
+                <h2>
+                    The Glow Edit
+                </h2>
+
+
+                <p>
+                    Add your SEO content here later.
+                    This section can introduce your skincare
+                    products, beauty rituals, ingredients,
+                    or glow tips.
+                </p>
+
+
+                <!-- LINK TO GLOW EDIT -->
+
+                <a
+                    href="glow-edit.html"
+                    class="text-link"
+                >
+                    Explore The Glow Edit
+                </a>
+
+
+            </div>
+
+
+            <!-- IMAGE -->
+
+            <div class="split-image">
+
+                <img
+                    src="images/skincare-collage.jpg"
+                    alt="Skin Kiss skincare collage"
+                >
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             ROTATING LOGO + ABOUT
+        ================================================== -->
+
+        <section class="brand-section">
+
+
+            <!-- ROTATING LOGO -->
+
+            <div class="rotating-logo">
+
+                <img
+                    src="images/logo.png"
+                    alt="Skin Kiss Logo"
+                >
+
+            </div>
+
+
+            <!-- ABOUT PREVIEW -->
+
+            <div class="about-preview">
+
+
+                <h2>
+                    About Skin Kiss
+                </h2>
+
+
+                <p>
+                    Add your brand story here later.
+                    This area can explain the inspiration
+                    behind Skin Kiss, your skincare mission,
+                    and the overall vibe of the brand.
+                </p>
+
+
+                <!-- LINK TO OUR STORY -->
+
+                <a
+                    href="our-story.html"
+                    class="text-link"
+                >
+                    Read Our Story
+                </a>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             CUSTOMER REVIEWS
+        ================================================== -->
+
+        <section class="reviews">
+
+
+            <h2>
+                What They’re Saying
+            </h2>
+
+
+            <div class="review-grid">
+
+
+                <!-- REVIEW 1 -->
+
+                <div class="review-card">
+
+
+                    <div class="review-photo">
+
+                        <img
+                            src="images/review1.jpg"
+                            alt="Customer review photo"
+                        >
+
+                    </div>
+
+
+                    <p>
+                        “Add customer review here later.”
+                    </p>
+
+
+                    <h4>
+                        Customer Name
+                    </h4>
+
+
+                </div>
+
+
+
+                <!-- REVIEW 2 -->
+
+                <div class="review-card">
+
+
+                    <div class="review-photo">
+
+                        <img
+                            src="images/review2.jpg"
+                            alt="Customer review photo"
+                        >
+
+                    </div>
+
+
+                    <p>
+                        “Add customer review here later.”
+                    </p>
+
+
+                    <h4>
+                        Customer Name
+                    </h4>
+
+
+                </div>
+
+
+
+                <!-- REVIEW 3 -->
+
+                <div class="review-card">
+
+
+                    <div class="review-photo">
+
+                        <img
+                            src="images/review3.jpg"
+                            alt="Customer review photo"
+                        >
+
+                    </div>
+
+
+                    <p>
+                        “Add customer review here later.”
+                    </p>
+
+
+                    <h4>
+                        Customer Name
+                    </h4>
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+
+
+    <!-- =====================================================
+         ROUND 5 — PINK SCRATCH-OFF INCENTIVE
+         25% OFF FIRST ORDER
+         Mobile-friendly popup
+    ====================================================== -->
+
+    <div
+        class="skin-kiss-scratch-overlay"
+        id="scratch-off"
+        aria-hidden="true"
+    >
+
+        <div
+            class="scratch-card"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="scratch-title"
+        >
+
+            <button
+                type="button"
+                class="scratch-close"
+                id="scratch-close"
+                aria-label="Close Skin Kiss offer"
+            >
+                ×
+            </button>
+
+            <div class="scratch-card-decor scratch-decor-one">✦</div>
+            <div class="scratch-card-decor scratch-decor-two">♡</div>
+            <div class="scratch-card-decor scratch-decor-three">✧</div>
+
+            <p class="scratch-eyebrow">A LITTLE EXTRA GLOW ✦</p>
+
+            <h2 id="scratch-title">A Surprise<br>Just for You</h2>
+
+            <p class="scratch-intro">
+                Scratch below to reveal your Skin Kiss surprise.
+            </p>
+
+            <div class="scratch-area" id="scratch-area">
+
+                <div class="scratch-reveal" id="scratch-reveal">
+                    <span class="scratch-reveal-small">YOU GOT IT!</span>
+                    <strong>25% OFF</strong>
+                    <span class="scratch-reveal-small">YOUR FIRST ORDER</span>
+                </div>
+
+                <canvas
+                    class="scratch-canvas"
+                    id="scratch-canvas"
+                    aria-label="Scratch this pink card to reveal your Skin Kiss offer"
+                ></canvas>
+
+                <div class="scratch-instruction" id="scratch-instruction">
+                    <span>✦</span>
+                    SCRATCH TO REVEAL
+                    <span>✦</span>
+                </div>
+
+            </div>
+
+            <div class="scratch-progress" id="scratch-progress" aria-live="polite">
+                Keep scratching to reveal your surprise ♡
+            </div>
+
+            <div class="scratch-success" id="scratch-success" hidden>
+
+                <p class="scratch-success-title">YOU GOT 25% OFF! 💕</p>
+
+                <p>
+                    Enter your email to unlock your first-order offer.
+                </p>
+
+                <form id="scratch-email-form" class="scratch-email-form">
+
+                    <label for="scratch-email" class="sr-only">
+                        Email address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="scratch-email"
+                        name="email"
+                        placeholder="Your email address"
+                        autocomplete="email"
+                        required
+                    >
+
+                    <button type="submit" class="scratch-submit">
+                        UNLOCK MY 25% OFF
+                    </button>
+
+                </form>
+
+                <div class="scratch-code" id="scratch-code" hidden>
+                    <span>Your Skin Kiss code:</span>
+                    <strong>GLOW25</strong>
+                </div>
+
+                <a href="tools.html" class="scratch-shop-button" id="scratch-shop-button" hidden>
+                    SHOP SKIN KISS
+                </a>
+
+            </div>
+
+            <p class="scratch-fine-print">
+                One first-order offer per customer. Prototype promotion.
+            </p>
+
+        </div>
+
+    </div>
+
+    <footer>
+
+
+        <!-- FOOTER NAVIGATION -->
+
+        <nav
+            class="bottom-nav"
+            aria-label="Footer navigation"
+        >
+
+            <ul>
+
+
+                <!-- PRIVACY -->
+
+                <li>
+
+                    <a href="privacy.html">
+
+                        Privacy Statement
+
+                    </a>
+
+                </li>
+
+
+                <!-- SHIPPING -->
+
+                <li>
+
+                    <a href="contact.html">
+
+                       Contact Us
+
+                    </a>
+
+                </li>
+
+
+                <!-- TERMS -->
+
+                <li>
+
+                    <a href="terms-service.html">
+
+                        Terms &amp; Service
+
+                    </a>
+
+                </li>
+
+
+                <!-- FAQ -->
+
+                <li>
+
+                    <a href="faq.html">
+
+                        FAQ
+
+                    </a>
+
+                </li>
+
+
+            </ul>
+
+        </nav>
+
+
+        <!-- COPYRIGHT -->
+
+        <p>
+
+            &copy; 2026, Skin Kiss.
+
+            This is a fictitious web page created solely
+            for education and training.
+        </p>
+
+
+    </footer>
+
+
+
+<!-- =====================================================
+     SHOP DROPDOWN JAVASCRIPT
+     CLICK / TAP ONLY
+===================================================== -->
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const dropdown = document.querySelector(".dropdown");
+    const toggle = document.querySelector(".shop-dropdown-toggle");
+
+    if (!dropdown || !toggle) {
+        return;
+    }
+
+    toggle.addEventListener("click", function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+
+        const isOpen = dropdown.classList.toggle("open");
+
+        toggle.setAttribute(
+            "aria-expanded",
+            isOpen ? "true" : "false"
+        );
+    });
+
+    document.addEventListener("click", function (event) {
+
+        if (!dropdown.contains(event.target)) {
+
+            dropdown.classList.remove("open");
+
+            toggle.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+        }
+    });
+
+    document.addEventListener("keydown", function (event) {
+
+        if (event.key === "Escape") {
+
+            dropdown.classList.remove("open");
+
+            toggle.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+        }
+    });
+
+    const dropdownLinks =
+        dropdown.querySelectorAll(".dropdown-menu a");
+
+    dropdownLinks.forEach(function (link) {
+
+        link.addEventListener("click", function () {
+
+            dropdown.classList.remove("open");
+
+            toggle.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+        });
+    });
+
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const track = document.querySelector(".promo-track");
+    const marquee = document.querySelector(".promo-marquee");
+
+    if (!track || !marquee) {
+        return;
+    }
+
+    const reducedMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+    );
+
+    function setPromoSpeed() {
+
+        if (reducedMotion.matches) {
+            track.style.animation = "none";
+            track.style.transform = "translateX(0)";
+            return;
+        }
+
+        /*
+           The track contains two matching halves.
+           This measures one half so the loop stays seamless.
+        */
+
+        const distance = track.scrollWidth / 2;
+
+        const pixelsPerSecond =
+            window.innerWidth <= 600 ? 45 : 55;
+
+        const duration =
+            Math.max(distance / pixelsPerSecond, 8);
+
+        track.style.setProperty(
+            "--promo-distance",
+            distance + "px"
+        );
+
+        track.style.setProperty(
+            "--promo-duration",
+            duration + "s"
+        );
+    }
+
+    setPromoSpeed();
+
+    window.addEventListener(
+        "resize",
+        setPromoSpeed
+    );
+
+    reducedMotion.addEventListener(
+        "change",
+        setPromoSpeed
+    );
+
+});
+</script>
+
+
+
+<script>
+/* =====================================================
+   ROUND 5 — PINK SCRATCH-OFF JAVASCRIPT
+   Mobile-friendly scratch interaction + email reveal
+===================================================== */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const overlay = document.getElementById("scratch-off");
+    const closeButton = document.getElementById("scratch-close");
+    const canvas = document.getElementById("scratch-canvas");
+    const scratchArea = document.getElementById("scratch-area");
+    const instruction = document.getElementById("scratch-instruction");
+    const progress = document.getElementById("scratch-progress");
+    const success = document.getElementById("scratch-success");
+    const emailForm = document.getElementById("scratch-email-form");
+    const code = document.getElementById("scratch-code");
+    const shopButton = document.getElementById("scratch-shop-button");
+
+    if (!overlay || !canvas || !scratchArea) {
+        return;
+    }
+
+    const ctx = canvas.getContext("2d", { willReadFrequently: true });
+    let isScratching = false;
+    let hasRevealed = false;
+    let lastPoint = null;
+    let scratchCheckCounter = 0;
+
+    function setupCanvas() {
+
+        const rect = scratchArea.getBoundingClientRect();
+        const ratio = Math.min(window.devicePixelRatio || 1, 2);
+
+        canvas.width = Math.round(rect.width * ratio);
+        canvas.height = Math.round(rect.height * ratio);
+
+        ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+        ctx.globalCompositeOperation = "source-over";
+
+        /* Pink scratch coating */
+        const gradient = ctx.createLinearGradient(0, 0, rect.width, rect.height);
+        gradient.addColorStop(0, "#e75885");
+        gradient.addColorStop(0.5, "#ef7197");
+        gradient.addColorStop(1, "#d94d7b");
+
+        ctx.fillStyle = gradient;
+        ctx.fillRect(0, 0, rect.width, rect.height);
+
+        /* Subtle pink-on-pink decorative texture */
+        ctx.fillStyle = "rgba(255, 255, 255, 0.10)";
+
+        for (let x = 15; x < rect.width; x += 34) {
+            for (let y = 15; y < rect.height; y += 34) {
+                ctx.beginPath();
+                ctx.arc(x, y, 1.5, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+
+        ctx.globalCompositeOperation = "destination-out";
+        ctx.lineCap = "round";
+        ctx.lineJoin = "round";
+        ctx.lineWidth = window.innerWidth <= 600 ? 38 : 46;
+    }
+
+    function getPoint(event) {
+
+        const rect = canvas.getBoundingClientRect();
+        const source = event.touches ? event.touches[0] : event;
+
+        return {
+            x: source.clientX - rect.left,
+            y: source.clientY - rect.top
+        };
+    }
+
+    function scratch(point) {
+
+        if (!lastPoint) {
+            ctx.beginPath();
+            ctx.arc(point.x, point.y, ctx.lineWidth / 2, 0, Math.PI * 2);
+            ctx.fill();
+            lastPoint = point;
+            return;
+        }
+
+        ctx.beginPath();
+        ctx.moveTo(lastPoint.x, lastPoint.y);
+        ctx.lineTo(point.x, point.y);
+        ctx.stroke();
+
+        lastPoint = point;
+        scratchCheckCounter++;
+
+        if (scratchCheckCounter % 10 === 0) {
+            checkScratchAmount();
+        }
+    }
+
+    function checkScratchAmount() {
+
+        if (hasRevealed) {
+            return;
+        }
+
+        const pixels = ctx.getImageData(
+            0,
+            0,
+            canvas.width,
+            canvas.height
+        ).data;
+
+        let transparent = 0;
+        const sampleStep = 16;
+
+        for (let i = 3; i < pixels.length; i += sampleStep * 4) {
+            if (pixels[i] < 80) {
+                transparent++;
+            }
+        }
+
+        const totalSamples = Math.ceil(pixels.length / (sampleStep * 4));
+        const percentage = (transparent / totalSamples) * 100;
+
+        if (percentage >= 52) {
+            revealPrize();
+        } else {
+            progress.textContent =
+                Math.max(1, Math.round(percentage)) +
+                "% revealed — keep scratching ♡";
+        }
+    }
+
+    function revealPrize() {
+
+        if (hasRevealed) {
+            return;
+        }
+
+        hasRevealed = true;
+        isScratching = false;
+
+        ctx.clearRect(
+            0,
+            0,
+            canvas.width,
+            canvas.height
+        );
+
+        instruction.style.display = "none";
+        progress.textContent = "Your Skin Kiss surprise is revealed ✦";
+        success.hidden = false;
+
+        /* Keep the revealed prize visible for the visitor. */
+        setTimeout(function () {
+            document.getElementById("scratch-email").focus();
+        }, 150);
+    }
+
+    function openScratchOff() {
+
+        overlay.classList.add("is-visible");
+        overlay.setAttribute("aria-hidden", "false");
+        document.body.classList.add("scratch-open");
+
+        setupCanvas();
+    }
+
+    function closeScratchOff() {
+
+        overlay.classList.remove("is-visible");
+        overlay.setAttribute("aria-hidden", "true");
+        document.body.classList.remove("scratch-open");
+    }
+
+    canvas.addEventListener("pointerdown", function (event) {
+
+        if (hasRevealed) {
+            return;
+        }
+
+        isScratching = true;
+        lastPoint = getPoint(event);
+        canvas.setPointerCapture(event.pointerId);
+        scratch(lastPoint);
+    });
+
+    canvas.addEventListener("pointermove", function (event) {
+
+        if (!isScratching || hasRevealed) {
+            return;
+        }
+
+        scratch(getPoint(event));
+    });
+
+    function stopScratching() {
+        isScratching = false;
+        lastPoint = null;
+        checkScratchAmount();
+    }
+
+    canvas.addEventListener("pointerup", stopScratching);
+    canvas.addEventListener("pointercancel", stopScratching);
+    canvas.addEventListener("pointerleave", function () {
+        if (isScratching) {
+            isScratching = false;
+            lastPoint = null;
+            checkScratchAmount();
+        }
+    });
+
+    closeButton.addEventListener("click", closeScratchOff);
+
+    overlay.addEventListener("click", function (event) {
+        if (event.target === overlay) {
+            closeScratchOff();
+        }
+    });
+
+    document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape" && overlay.classList.contains("is-visible")) {
+            closeScratchOff();
+        }
+    });
+
+    window.addEventListener("resize", function () {
+        if (overlay.classList.contains("is-visible") && !hasRevealed) {
+            setupCanvas();
+        }
+    });
+
+    emailForm.addEventListener("submit", function (event) {
+
+        event.preventDefault();
+
+        if (!emailForm.checkValidity()) {
+            emailForm.reportValidity();
+            return;
+        }
+
+        code.hidden = false;
+        shopButton.hidden = false;
+
+        emailForm.innerHTML =
+            '<p style="margin:0;color:#4a1f2d;font-size:11px;line-height:1.6;">' +
+            "You're in! Your Skin Kiss offer is unlocked below." +
+            "</p>";
+
+        try {
+            sessionStorage.setItem("skinKissScratchClaimed", "true");
+        } catch (error) {
+            /* Storage may be unavailable; the prototype still works. */
+        }
+    });
+
+    /*
+       Prototype timing:
+       Show the scratch-off after 6 seconds.
+       It will not automatically return after being claimed in this session.
+    */
+    setTimeout(function () {
+
+        let alreadyClaimed = false;
+
+        try {
+            alreadyClaimed =
+                sessionStorage.getItem("skinKissScratchClaimed") === "true";
+        } catch (error) {
+            alreadyClaimed = false;
+        }
+
+        if (!alreadyClaimed) {
+            openScratchOff();
+        }
+
+    }, 6000);
+
+});
+</script>
+
+</body>
+
+</html>
