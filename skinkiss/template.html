@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Skin Kiss</title>
+
+
+    <!-- =========================================
+         GOOGLE FONTS
+    ========================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =========================================
+         SKIN KISS STYLESHEET
+    ========================================== -->
+
+    <link
+        rel="stylesheet"
+        href="css/styles.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+     Full-width header
+===================================================== -->
+
+<header>
+
+
+    <!-- =========================================
+         LOGO
+    ========================================== -->
+
+    <div class="logo-area">
+
+        <a href="index.html">
+
+            <img
+                src="images/logo.png"
+                alt="Skin Kiss Logo"
+            >
+
+        </a>
+
+    </div>
+
+
+
+    <!-- =========================================
+         MAIN NAVIGATION
+    ========================================== -->
+
+    <nav
+        class="top-nav"
+        aria-label="Main navigation"
+    >
+
+        <ul>
+
+
+            <!-- HOME -->
+
+            <li>
+
+                <a href="index.html">
+
+                    <span>♡</span>
+
+                    Home
+
+                </a>
+
+            </li>
+
+
+
+            <!-- =====================================
+                 SHOP DROPDOWN
+            ====================================== -->
+
+            <li class="dropdown">
+
+                <a
+                    href="#"
+                    class="shop-toggle"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                >
+
+                    <span>✦</span>
+
+                    Shop
+
+                </a>
+
+
+                <ul class="dropdown-menu">
+
+
+                    <!-- TOOLS -->
+
+                    <li>
+
+                        <a href="tools.html">
+
+                            <span>🪄</span>
+
+                            Tools
+
+                        </a>
+
+                    </li>
+
+
+
+                    <!-- TREATMENTS -->
+
+                    <li>
+
+                        <a href="treatments.html">
+
+                            <span>◌</span>
+
+                            Treatments
+
+                        </a>
+
+                    </li>
+
+
+                </ul>
+
+            </li>
+
+
+
+            <!-- THE GLOW EDIT -->
+
+            <li>
+
+                <a href="glow-edit.html">
+
+                    <span>✧</span>
+
+                    The Glow Edit
+
+                </a>
+
+            </li>
+
+
+
+            <!-- TRACK PACKAGE -->
+
+            <li>
+
+                <a href="trackpackage.html">
+
+                    <span>⌁</span>
+
+                    Track Page
+
+                </a>
+
+            </li>
+
+
+
+            <!-- OUR STORY -->
+
+            <li>
+
+                <a href="about.html">
+
+                    <span>❀</span>
+
+                    Our Story
+
+                </a>
+
+            </li>
+
+
+
+            <!-- CART / CHECKOUT -->
+
+            <li>
+
+                <a href="cart-checkout.html">
+
+                    <span>🛍</span>
+
+                    Cart/Checkout
+
+                </a>
+
+            </li>
+
+
+        </ul>
+
+    </nav>
+
+
+</header>
+
+
+
+<!-- =====================================================
+     SITE CONTENT WRAPPER
+
+     Maximum width: 1366px
+     Header + footer remain full width
+===================================================== -->
+
+<div class="site-wrapper">
+
+
+    <!-- =================================================
+         MAIN PAGE CONTENT
+
+         Individual pages go inside this area.
+    ================================================== -->
+
+    <main id="page-content">
+
+        <!--
+            PAGE CONTENT GOES HERE
+
+            Example:
+
+            <section>
+                ...
+            </section>
+        -->
+
+    </main>
+
+
+</div>
+
+
+
+<!-- =====================================================
+     FOOTER
+     Full-width footer
+===================================================== -->
+
+<footer>
+
+
+    <!-- =========================================
+         FOOTER NAVIGATION
+    ========================================== -->
+
+    <nav
+        class="bottom-nav"
+        aria-label="Footer navigation"
+    >
+
+        <ul>
+
+
+            <!-- PRIVACY -->
+
+            <li>
+
+                <a href="privacy.html">
+
+                    Privacy Statement
+
+                </a>
+
+            </li>
+
+
+
+            <!-- CONTACT -->
+
+            <li>
+
+                <a href="contact.html">
+
+                    Contact Us
+
+                </a>
+
+            </li>
+
+
+
+            <!-- TERMS -->
+
+            <li>
+
+                <a href="terms-service.html">
+
+                    Terms &amp; Service
+
+                </a>
+
+            </li>
+
+
+
+            <!-- FAQ -->
+
+            <li>
+
+                <a href="faq.html">
+
+                    FAQ
+
+                </a>
+
+            </li>
+
+
+        </ul>
+
+    </nav>
+
+
+
+    <!-- COPYRIGHT -->
+
+    <p>
+
+        &copy; 2026, Jasmin Soler.
+        This is a fictitious web page created solely for education and training.
+
+    </p>
+
+
+</footer>
+
+
+
+<!-- =====================================================
+     SHOP DROPDOWN
+     Desktop: CSS hover
+     Mobile: tap/click
+===================================================== -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+
+    const shopToggle =
+        document.querySelector(".shop-toggle");
+
+
+    const shopDropdown =
+        document.querySelector(".dropdown");
+
+
+    if (!shopToggle || !shopDropdown) {
+
+        return;
+
+    }
+
+
+
+    /* =========================================
+       TAP / CLICK SHOP
+    ========================================== */
+
+    shopToggle.addEventListener("click", function (event) {
+
+
+        event.preventDefault();
+
+
+        const isOpen =
+            shopDropdown.classList.toggle("open");
+
+
+        shopToggle.setAttribute(
+            "aria-expanded",
+            isOpen
+        );
+
+
+    });
+
+
+
+    /* =========================================
+       CLOSE DROPDOWN WHEN CLICKING ELSEWHERE
+    ========================================== */
+
+    document.addEventListener("click", function (event) {
+
+
+        if (!shopDropdown.contains(event.target)) {
+
+
+            shopDropdown.classList.remove("open");
+
+
+            shopToggle.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+
+        }
+
+    });
+
+
+
+    /* =========================================
+       CLOSE DROPDOWN WITH ESCAPE KEY
+    ========================================== */
+
+    document.addEventListener("keydown", function (event) {
+
+
+        if (event.key === "Escape") {
+
+
+            shopDropdown.classList.remove("open");
+
+
+            shopToggle.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+
+        }
+
+    });
+
+
+});
+
+</script>
+
+
+</body>
+
+</html>
